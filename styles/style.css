@@ -1,0 +1,712 @@
+.nav-container{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;  
+}
+
+.nav-default{
+    background-color: transparent;
+}
+
+.nav-dark{
+    background-color: var(--black);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-section{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav-bar .links{
+    display: flex;
+    gap: 20px;  
+}
+
+.nav-bar .links .link{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--yellow);
+}
+
+.navbar-right .wrap{
+    display: flex;
+    gap: 10px;  
+    align-items: center;
+}
+
+.navbar-right .text h5{   
+   margin-top: -15px;
+}
+
+.navbar-right .text .auth-link{   
+  text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: relative;
+}
+
+.header-bg{   
+    background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-attached{
+    background-attachment: fixed;
+}
+
+.header-home{
+    background-image: url("https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+.header-text{
+    align-items: center;   
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.header-text p{
+    font-size: 30px;
+}
+
+.header-text p:first-child{
+    color: whitesmoke;  
+}
+
+.header-text h1{
+    font-size: 70px;
+    color: var(--yellow);
+    font-weight: 900;
+}
+
+.hero-cta{
+    display: flex;
+    gap: 20px;
+}
+
+.business-summary{
+    width: 100%;
+    position: relative;
+    min-height: 50vh;
+    background-color: var(--black);
+    padding: 20px; 
+}
+
+.card-bg{  
+    position: absolute;
+    transition: all .30s ease-in-out;   
+    display: flex;
+    justify-content: center;
+}
+
+.summary-step{
+    background-color: var(--yellow);
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    cursor: pointer;
+    width: 400px;
+    height: 250px;  
+    border-radius: 20px;  
+}
+
+.summary-step h4{
+    font-weight: bold;
+}
+
+.summary-step p{
+   color: var(--black);
+}
+
+.card-bg:hover{
+    transform: rotate(3deg);
+    width: 410px;  
+}
+
+.process-step{   
+    position: absolute;
+    bottom: 0px;
+    right: 0; 
+    top: -40px;   
+}
+
+.process-step h1{
+    font-size: 260px;
+    color: #1b1b1b34;    
+}
+
+.about-section{
+    width: 100%;
+    position: relative;
+    min-height: 50vh;
+    /* background-color: var(--black); */
+    padding: 20px; 
+}
+
+.into-image{
+    transform: rotate(3deg);
+}
+
+.services-section{
+    padding-bottom: 40px;
+}
+
+
+.service{
+    background-color: #222222;
+    width: 100%;   
+    position: relative;   
+    border-radius: 20px;   
+    padding: 40px;   
+    cursor: pointer; 
+    transition: all .38s ease-in-out;
+    border-bottom: 1px solid var(--yellow);
+}
+
+.service:hover{
+    border: 1px solid var(--yellow);
+    transform: rotate(3deg);
+}
+
+.service:hover .service-step{
+    border: 1px solid var(--yellow);
+}
+
+.service-step{   
+    position: absolute;
+    bottom: -30px;
+    left: 0; 
+    width: 90px;
+    height: 90px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+    border-radius: 50px;
+    transition: all .38s ease-in-out;
+    border-bottom: 1px solid var(--yellow);
+}
+
+.service-step h1{
+    font-size: 40px;
+    color: var(--yellow);    
+}
+
+.filter{
+    width: 100%;   
+    /* border: 1px solid var(--black); */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.car-filter-item{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.car-section{
+    background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+.car-display{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.product{
+    width: 300px;
+    min-height: 420px;
+    border-radius: 20px;
+    border: 1px solid var(--yellow);
+}
+
+.product .car-image{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    transition: all .38s ease-in-out;
+    border-radius: 20px;
+}
+
+.car-image:hover{
+    transform: scale(.97);
+}
+
+.addToCart{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+}
+
+.addCart{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 20px;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+.product .car-info{
+    padding: 0px 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.testimonial{
+    width: 100%;
+    position: relative;
+    height: 350px;
+    background-color: var(--black);
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+.testimonial:hover{
+    transform: rotate(3deg);
+}
+
+.testimonial .absolute{
+    background-color: var(--black);
+    position: absolute;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.testimonial .absoluteTop{
+    top: -20px;
+    left: 0px;
+}
+
+.testimonial .absoluteBottom{
+    bottom: -20px;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.testimonial .fa{
+    font-size: 30px;
+}
+
+.testimonial .content{
+    margin-top: 50px;
+}
+
+.testimonial-image{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonial-1{   
+    background-image: url("https://images.unsplash.com/photo-1498887960847-2a5e46312788?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");    
+}
+
+
+.testimonial-2{   
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYy7azOhPjbPBTPiA1QN5Dm_ry4GQ1LHrBf-quBN0zgMydTkYvCHXkUABa_MG2ik9yIqk&usqp=CAU");   
+}
+
+.testimonial-3{   
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230614/pngtree-the-photo-of-a-woman-with-red-sunglasses-is-surrounded-by-image_2931163.jpg");
+}
+
+.testimonial-0{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7c5Nj4a7oChd-rUn4OwOa53A_MmPJWjbi7fKCgyASFA&s");
+}
+
+.app-section{
+    width:100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.app-item{
+    width: 80%;
+    height: 400px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.app-item .section{
+    width: 50%;
+    position: relative;
+}
+
+.app-item .bg{
+    background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://images.unsplash.com/photo-1480694313141-fce5e697ee25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    
+}
+
+.app-message{
+   padding: 40px;
+}
+
+.app-btn{
+    display: flex;
+    gap: 15px;   
+}
+
+.quick-link .link-wrap{
+    list-style-type: circle;
+    color: var(--yellow);   
+}
+
+.footer-link{
+    font-size: 18px; 
+    text-decoration: none; 
+    color: #999;   
+}
+
+.footer-link:hover{
+    color: var(--yellow);  
+}
+/**About s Page **/
+.header-about{
+    background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+.header-page-title{
+    display: flex;   
+    align-items: center;
+    height: 70vh;
+}
+
+/**SERVICES**/
+.header-service{
+    background-image: url("https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+/**CARS**/
+.header-cars{
+    background-image: url("https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+.search-area{
+    width: 400px;
+    height: 550px;
+    position: relative;  
+    margin-top: -50px;
+    /* border: 1px solid var(--yellow); */
+}
+
+.search-wrapper{
+    width: 100%;
+    position: relative;
+    background-color: var(--yellow);
+    padding: 10px;
+}
+
+.filter-region{
+    position: relative;
+}
+
+.filter-region label{
+    color: var(--yellow);
+}
+
+.car-page .car-display{
+    display: flex;
+    justify-content: center;
+}
+
+/**Contact us**/
+
+.header-contact{
+    background-image: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1883&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+.contact-form-bg{
+    background-image: url("https://images.unsplash.com/photo-1636955816868-fcb881e57954?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+.contact-box {
+    margin-top: -70px;
+    position: relative;
+}
+
+.contact-box .process .process-step h1{
+    font-size: 180px;
+}
+
+.contact-box  .process{
+    width: 400px;   
+    position: relative;   
+    border-radius: 20px;   
+    padding: 50px;
+    transition: all .20s ease-in; 
+    cursor: pointer; 
+}
+
+
+.contact-box  .process-title{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.contact-box  .process p{
+    color: black;
+    font-size: 16px;
+}
+
+.contact-box .active{
+    background-color: white;
+    transform: rotate(-3deg);
+}
+
+.contact-box  .process:hover{
+    margin-top: -10px;
+    background-color: white;
+    transform: rotate(-3deg);
+}
+
+.contact-box  .process-step{   
+    position: absolute;
+    bottom: 0px;
+    right: 0; 
+    top: -40px;   
+}
+
+.contact-box  .process-step h1{
+    font-size: 260px;
+    color: #1b1b1b34;    
+}
+
+.contact-box  .process:hover .process-step h1{
+    color: var(--yellow);
+    opacity: .5;
+}
+
+
+/**Pricing**/
+
+.header-pricing {
+    background-image: url("https://images.unsplash.com/photo-1651340927948-26826aaef4b0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+}
+
+.pricing{
+    background-color: var(--card-dark);
+    width: 100%;
+    height: 450px;
+    padding: 30px;
+    position: relative;
+    transition: all .30s ease-in-out;
+    cursor: pointer;
+    animation: rotatePrice 2s infinite;
+}
+
+.pricing ul{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style-type: circle;  
+}
+
+.pricing ul li{
+    list-style: circle;    
+}
+
+.pricing h5{
+    color: white;
+}
+
+.pricing:hover{
+    /* transform: scale(1.1);
+    transform: rotate(3deg); */
+    animation: rotatePrice 2s infinite;
+}
+
+@keyframes rotatePrice {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+}
+
+.pricing .absolute{
+    position: absolute;
+    right: 10px;
+    top: -10px;
+   visibility: hidden;
+   transition: all .30s ease-in-out;
+}
+
+.pricing:hover .absolute{
+    visibility: visible;
+}
+
+.pricing-wrap{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+/**AUTH**/
+.auth-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-bg{
+    background-image: url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.login-form-container{
+    width: 450px;
+    min-height: 450px;
+    background-color: var(--card-dark);
+    box-shadow: rgba(246, 246, 246, 0.304) 0px 7px 29px 0px;
+    padding: 20px 30px;
+    position: relative;
+    transition: all .38s ease-in-out;
+    cursor: pointer;
+}
+
+.login-form-container:hover{
+    box-shadow: rgba(246, 246, 246, 0.619) 0px 7px 29px 0px;
+}
+
+.list-group{
+    border-left: none;
+    border-right: none;
+}
+
+.car-reports .car-wrap{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    transition: all .38s ease-in-out;
+    border-radius: 20px;
+}
+
+.report-content{
+    position: relative;
+    display: none;
+    margin-top: 30px;
+    opacity: .7;
+    transition: all .30s ease-in-out;
+}
+
+.active-content{
+    display: block;
+    margin-top: 10px;
+    opacity: 1;
+}
+
+
+.report-summary {
+    width: 100%;
+    position: relative;
+}
+
+.report-summary .summary-wrap {
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.report-summary{
+    display: flex;
+    gap: 20px;
+}
+
+.report-summary .sectionHover:hover {   
+    color: grey;
+}
+
+.report-summary .summary {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.report-summary .summary .info {
+    line-height: 2px;
+}
+
+.report-summary .summary p {
+    margin-top: -10px;
+    opacity: 0.8;
+}
+
+.report-summary .summary h5 {
+   color: whitesmoke;
+}
+
+.report-summary .summary span {
+    font-size: 25px;   
+}
+
+.car-report-summary span{
+    color: #999;
+}
