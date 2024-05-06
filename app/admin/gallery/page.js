@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import CarFilter from "@/components/CarFilter";
 import Product from "@/components/Product";
 import ReachOut from "@/components/ReachOut";
-import products from "@/lib/products";
-import { adminUrl, carTypes, carBrands } from "@/lib/app";
+import products from "@/app/lib/products";
+import { carTypes, carBrands } from "@/app/lib/app";
+import { adminUrl } from "@/app/lib/navigations";
 
 const page = () => {
   return (

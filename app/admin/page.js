@@ -2,26 +2,10 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { adminUrl } from "@/lib/app";
+import { adminUrl } from "@/app/lib/navigations";
 import { useEffect } from "react";
 
 const Admin = () => {
-  // useEffect(() => {
-  //   const url = "http://localhost/over10API/Account.php";
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(url);
-  //       if (!response.ok) {
-  //         throw new Error("Network response not okay");
-  //       }
-  //       const json = await response.json();
-  //       console.log(json);
-  //     } catch {
-  //       console.log("Error found");
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
   return (
     <div>
       <header className="header-bg login-bg vh-50">

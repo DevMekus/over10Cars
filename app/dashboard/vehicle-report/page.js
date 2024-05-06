@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { dashUrl } from "@/lib/app";
+import { dashUrl } from "@/app/lib/navigations";
 import { useEffect } from "react";
 
 const page = () => {

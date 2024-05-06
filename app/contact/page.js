@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import homeUrl from "@/lib/navLink";
+import { homeUrl } from "@/app/lib/navigations";
 import ReachOut from "@/components/ReachOut";
 import AppDownload from "@/components/AppDownload";
 

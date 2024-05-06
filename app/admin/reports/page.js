@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { adminUrl } from "@/lib/app";
-import Link from "next/link";
+import { adminUrl } from "@/app/lib/navigations";
 
 const page = () => {
   return (

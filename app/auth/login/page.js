@@ -1,21 +1,35 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import homeUrl from "@/lib/navLink";
+import homeUrl from "@/app/lib/navLink";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { loginUser } from "@/app/actions/authenticate";
 
 const Login = () => {
-  const [auth, setAuth] = useState(false);
-  const [errOpen, setErrorOpen] = useState(true);
+  const [auth, setAuth] = useState({});
+  const [errOpen, setErrorOpen] = useState(false);
 
   const searchParams = useSearchParams();
   const search = searchParams.get("auth");
+  const event = searchParams.get("ev");
 
   useEffect(() => {
-    if (search === "f") {
-      setAuth(true);
+    if (search === "false") {
+      setErrorOpen(true);
+      setAuth({
+        status: false,
+        message: "Access Denied. Please log in",
+      });
+    }
+
+    if (event == "logout") {
+      setErrorOpen(true);
+      setAuth({
+        status: true,
+        message: "Logout successful",
+      });
     }
   }, []);
 
@@ -23,6 +37,13 @@ const Login = () => {
     if (errOpen) {
       setErrorOpen(false);
     }
+  }
+
+  function handleLogin(event) {
+    console.error("Login handler callec..");
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    loginUser(undefined, formData);
   }
 
   return (
@@ -35,17 +56,39 @@ const Login = () => {
           </h1>
           {errOpen && (
             <div className="mt-15 flex space-between">
-              {auth && <p className="redColor">Access Denied. Please log in</p>}
-              <div className="btn-close color-white" onClick={closeError}></div>
+              {auth && (
+                <p className={!auth.status ? "redColor" : "greenColor"}>
+                  {auth.message}
+                </p>
+              )}
+              {errOpen && (
+                <div
+                  className="btn-close color-white"
+                  onClick={closeError}
+                ></div>
+              )}
             </div>
           )}
 
-          <form className="mt-15">
+          <form onSubmit={handleLogin} className="mt-15">
             <div className="flex gap-10">
-              <input type="text" placeholder="Your Email*" className="" />
+              <input
+                type="email"
+                placeholder="John@example.com"
+                className="form-data"
+                id="email"
+                name="email"
+                required
+              />
             </div>
             <div className="flex gap-10">
-              <input type="password" placeholder="Password*" className="" />
+              <input
+                type="password"
+                placeholder="Password*"
+                id="password"
+                name="password"
+                required
+              />
             </div>
             <div className="flex gap-10">
               <Link href="/auth/signup">
@@ -53,7 +96,9 @@ const Login = () => {
               </Link>
             </div>
             <div className="hero-cta mt-15">
-              <button className="btn-fw btn-pill primary">Get Started</button>
+              <button type="submit" className="btn-fw btn-pill primary">
+                Login account
+              </button>
             </div>
           </form>
           <div className="mt-15">

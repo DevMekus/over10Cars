@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReachOut from "@/components/ReachOut";
 
-import { dashUrl } from "@/lib/app";
+import { dashUrl } from "@/app/lib/navigations";
 
 const page = () => {
   return (

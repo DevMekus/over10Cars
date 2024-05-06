@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import homeUrl from "@/lib/navLink";
+import { homeUrl } from "@/app/lib/navigations";
 import AboutIntro from "@/components/AboutIntro";
 import ServiceIntro from "@/components/ServiceIntro";
 import TestimonialSection from "@/components/TestimonialSection";

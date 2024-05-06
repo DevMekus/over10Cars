@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ReachOut from "@/components/ReachOut";
-import AppDownload from "@/components/AppDownload";
-import { dashUrl } from "@/lib/app";
+import { dashUrl } from "@/app/lib/navigations";
 import Link from "next/link";
 
 const page = () => {

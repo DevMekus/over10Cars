@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
+import { logoutUser } from "@/app/actions/authenticate";
 
 const Navbar = ({ links, login }) => {
   const [isScrolled, setisScrolled] = useState(false);
@@ -21,6 +22,10 @@ const Navbar = ({ links, login }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  function handleLogout() {
+    console.log("logging off....");
+    logoutUser();
+  }
   return (
     <div className={`nav-container ${isScrolled ? "nav-dark" : "nav-default"}`}>
       <nav className="nav-bar container">
@@ -38,7 +43,7 @@ const Navbar = ({ links, login }) => {
           <div className="links">
             {links.map((link) => (
               <div key={link.id} className="link-wrapper">
-                <Link href={`${link.url}`} className="link">
+                <Link href={`${link.url}`} className="link" key={link.id}>
                   {link.name}
                 </Link>
               </div>
@@ -55,7 +60,11 @@ const Navbar = ({ links, login }) => {
               <div className="text">
                 <p>{login ? "Have an account?" : ""}</p>
                 <h5>
-                  <Link href={login ? `/auth/login` : ``} className="auth-link">
+                  <Link
+                    href={login ? `/auth/login` : ``}
+                    onClick={login ? "" : handleLogout}
+                    className="auth-link"
+                  >
                     Sign {login ? "in" : "out"}
                   </Link>
                 </h5>

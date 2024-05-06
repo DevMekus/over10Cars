@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import homeUrl from "@/lib/navLink";
+import { homeUrl } from "@/app/lib/navigations";
 import CarFilter from "@/components/CarFilter";
 import Product from "@/components/Product";
 import ReachOut from "@/components/ReachOut";
-import products from "@/lib/products";
-import { carTypes, carBrands } from "@/lib/app";
+import products from "@/app/lib/products";
+import { carTypes, carBrands } from "@/app/lib/app";
 
 const page = () => {
   return (

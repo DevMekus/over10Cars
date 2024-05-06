@@ -6,11 +6,10 @@ import ServiceIntro from "@/components/ServiceIntro";
 import TestimonialSection from "@/components/TestimonialSection";
 import AppDownload from "@/components/AppDownload";
 import ReachOut from "@/components/ReachOut";
-import homeUrl from "@/lib/navLink";
-import { carTypes, carBrands } from "@/lib/app";
+import { homeUrl } from "@/app/lib/navigations";
+import { carTypes, carBrands } from "@/app/lib/app";
 
 const page = () => {
- 
   return (
     <main>
       <header className="header-bg header-home vh-90">

@@ -1,11 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import homeUrl from "@/lib/navLink";
+
 import CarFilter from "@/components/CarFilter";
 import Product from "@/components/Product";
 import ReachOut from "@/components/ReachOut";
-import products from "@/lib/products";
-import { dashUrl, carTypes, carBrands } from "@/lib/app";
+import products from "@/app/lib/products";
+import { carTypes, carBrands } from "@/app/lib/app";
+import { dashUrl } from "@/app/lib/navigations";
 
 const page = () => {
   return (
@@ -57,7 +58,7 @@ const page = () => {
                 </span>
               </div>
               <div className="icon-wrap wrap-primary">
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span className="material-symbols-outlined">chevron_right</span>
               </div>
             </div>
           </div>

@@ -16,11 +16,16 @@ export const dashUrl = [
   },
   {
     id: 4,
-    name: "Cars4Sale",
-    url: "/dashboard/cars",
+    name: "Vehicle Report",
+    url: "/dashboard/vehicle-report",
   },
   {
     id: 5,
+    name: "Car4Sale",
+    url: "/dashboard/cars",
+  },
+  {
+    id: 6,
     name: "Settings",
     url: "/dashboard/settings",
   },

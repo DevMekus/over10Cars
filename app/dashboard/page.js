@@ -5,24 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReachOut from "@/components/ReachOut";
 import AppDownload from "@/components/AppDownload";
-import { dashUrl } from "@/lib/app";
-import useAuth from "@/hooks/useAuth";
+import { dashUrl } from "@/app/lib/navigations";
 
 const Dashboard = () => {
-  const router = useRouter();
-  const { isLoading, isLoggedIn } = useAuth();
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!isLoggedIn) {
-    setTimeout(() => {
-      router.push("/auth/login?auth=f");
-    }, 2000);
-    return <div>Access Denied. Please log in to access the dashboard.</div>;
-  }
-
   return (
     <div>
       <header className="header-bg login-bg vh-50">
